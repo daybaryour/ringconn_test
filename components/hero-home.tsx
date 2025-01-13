@@ -13,7 +13,7 @@ import Classic from "@/components/visualizers/classic";
 import Modal from "./ui/modal";
 
 export default function HeroHome() {
-  const [formData, setFormData] = useState({ firstname: "", lastname: "", phone: "", salesScenario: "" });
+  const [formData, setFormData] = useState({ firstname: "", lastname: "", phone: "", sales_scenario: "" });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   const [open, setOpen] = useState(false);
@@ -194,8 +194,8 @@ export default function HeroHome() {
 									<select
 										id="sales-scenario"
 										className="w-full outline-none border-none bg-transparent"
-										name="salesScenario"
-										value={formData.salesScenario}
+										name="sales_scenario"
+										value={formData.sales_scenario}
 										onChange={handleChange}
 									>
 										<option value="" disabled>Select a scenario</option>

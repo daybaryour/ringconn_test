@@ -2,6 +2,8 @@ import {  NextRequest, NextResponse } from 'next/server';
 
 interface FormData {
   firstname: string;
+  lastname: string;
+  sales_scenario: string;
   phone: string;
 }
 
@@ -11,24 +13,32 @@ export async function POST(
 ) {
   try {
     const body = await req.json() as FormData;
-    const { firstname, phone } = body;
+    const { firstname, lastname, sales_scenario, phone } = body;
 
-    console.log("data", body);
-
-    if (!firstname || !phone) {
+    if (!firstname || !phone || !sales_scenario || !lastname) {
       return NextResponse.json(
-        { message: 'Name and phone are required.' },
+        { message: 'All fields are required.' },
         { status: 400 }
       );
     }
 
     //call the VAPI public url with the token and get the response
-    
-    // Mock form processing (e.g., save to database, send email, etc.)
-    console.log(`Form submitted: Name: ${name}, Phone: ${phone}`);
+    const response = await fetch(`http://localhost:5001/api/create_new_vapi_call`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        phone,
+        sales_scenario,
+      }),
+    });
+    const data = await response.json();
 
     return NextResponse.json(
-      { message: 'Form submitted successfully!', formData: { name, phone } },
+      { message: 'Form submitted successfully!', formData: data },
       { status: 200 }
     );
   } catch (error) {
