@@ -32,7 +32,6 @@ export default function HeroHome() {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      console.log(data);
       setResponseMessage(data.message || "Form submitted successfully!");
     } catch (error) {
       setResponseMessage("Something went wrong. Please try again.");

@@ -23,7 +23,7 @@ export async function POST(
     }
 
     //call the VAPI public url with the token and get the response
-    const response = await fetch(`http://localhost:5001/api/create_new_vapi_call`, {
+    const response = await fetch(`${process.env.SERVER_URL}/api/create_new_vapi_call`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
