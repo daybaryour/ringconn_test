@@ -17,9 +17,18 @@ export default function HeroHome() {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [closeSuccessModal, setCloseSuccessModal] = useState("hidden");
 
   const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const resetModal = () => {
+	setOpen(false);
+	setFormData({ firstname: "", lastname: "", phone: "", sales_scenario: "" });
+	setResponseMessage("");
+	setCloseSuccessModal("hidden");
   };
 
   const handleSubmit = async (e:any) => {
@@ -32,7 +41,14 @@ export default function HeroHome() {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      setResponseMessage(data.message || "Form submitted successfully!");
+
+	  if (data.status === 200) {
+		setResponseMessage(data.message || "Form submitted successfully!");
+	  	setCloseSuccessModal("");
+	  } else {
+		setResponseMessage(data.message || "Couldn't submit the form. Please try again.");
+	  }
+      
     } catch (error) {
       setResponseMessage("Something went wrong. Please try again.");
     }
@@ -126,7 +142,7 @@ export default function HeroHome() {
 					{/* Hero image */}
 				</div>
 			</div>
-			<Modal open={open} onClose={() => setOpen(false)}>
+			<Modal open={open} onClose={() => resetModal() }>
 				<div className="text-center">
 					<div className="mx-auto my-4 ">
 						
@@ -212,6 +228,30 @@ export default function HeroHome() {
 							{loading ? "Submitting..." : "Get Started"}
 							</button>
 						</form>
+					</div>
+					<div className={`flex flex-col justify-center items-center h-full w-full absolute bg-white top-0 left-0 ${closeSuccessModal}`}>
+						{/* Green Circle with Animated Check Icon */}
+						<div
+							className={`relative flex items-center justify-center w-32 h-32 bg-green-500 rounded-full animate-pop`}
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								className="w-16 h-16 text-white animate-draw-check"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								>
+								<path d="M5 13l4 4L19 7" />
+							</svg>
+						</div>
+
+						{/* Text */}
+						<div className={`relative flex`}>
+							<p className="mt-4 text-lg font-semibold text-gray-700">Success!</p>
+						</div>
 					</div>
 				</div>			
 			</Modal>

@@ -27,6 +27,10 @@ module.exports = {
         "6xl": ["4rem", { lineHeight: "1", letterSpacing: "-0.037em" }],
         "7xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.037em" }],
       },
+      animation: {
+        pop: "pop 0.6s ease-out forwards",
+        "draw-check": "draw-check 0.5s ease-in-out forwards",
+      },
       keyframes: {
         "code-1": {
           "0%": { opacity: 0 },
@@ -81,6 +85,15 @@ module.exports = {
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
+        },
+        pop: {
+          "0%": { transform: "scale(0.5)", opacity: "0" },
+          "50%": { transform: "scale(1.2)", opacity: "1" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        "draw-check": {
+          "0%": { strokeDasharray: "0 100", strokeDashoffset: "0" },
+          "100%": { strokeDasharray: "100 0", strokeDashoffset: "0" },
         },
       },
     },
