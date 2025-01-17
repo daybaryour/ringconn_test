@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
+import 'react-phone-number-input/style.css';
 import Avatar01 from "@/public/images/avatar-01.jpg";
 import Avatar02 from "@/public/images/avatar-02.jpg";
 import Avatar03 from "@/public/images/avatar-03.jpg";
@@ -10,6 +11,7 @@ import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 import Avatar06 from "@/public/images/avatar-06.jpg";
 import Classic from "@/components/visualizers/classic";
+import PhoneInput from 'react-phone-number-input';
 import Modal from "./ui/modal";
 
 export default function HeroHome() {
@@ -21,6 +23,7 @@ export default function HeroHome() {
   const [closeSuccessModal, setCloseSuccessModal] = useState("hidden");
 
   const handleChange = (e:any) => {
+	console.log(e.target);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -146,10 +149,10 @@ export default function HeroHome() {
 				<div className="text-center">
 					<div className="mx-auto my-4 ">
 						
-						<form className="bg-transparent w-full flex flex-col rounded-md p-5 my-8 flex items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+						<form className="bg-transparent w-full flex flex-col rounded-md p-3 flex items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
 							onSubmit={handleSubmit} >
 							{responseMessage && (
-								<p className="my-4 text-center text-red-600">{responseMessage}</p>
+								<p className="my-2 text-center text-red-600">{responseMessage}</p>
 							)}
 							<div className="flex w-full gap-4 mb-4">
 								<div className="flex-1">
@@ -189,17 +192,19 @@ export default function HeroHome() {
 								<label htmlFor="first-name" className="block text-sm/6 text-left font-medium text-gray-900">
 									Phone Number
 								</label>
-								<div className="flex-1 w-full items-center border-2 py-1 mb-4 rounded-lg">
-									<input
-										className="w-full outline-none border-none"
-										type="text"
+								<div className="flex-1 w-full items-center py-1 mb-4 rounded-lg">
+									<PhoneInput
+										international
+										defaultCountry="NG" // You can set a default country here
 										name="phone"
 										id="phone"
-										placeholder="Your phone number"
 										value={formData.phone}
-										onChange={handleChange}
-									/>
+										onChange={(value) => setFormData({ ...formData, phone: value || "" })}
+										className="mt-2 px-3 border border-gray-300 rounded-md w-full"
+										/>
 								</div>
+								
+								
 							</div>
 							<div className="flex-1 w-full mb-4">
 								<label htmlFor="sales-scenario" className="block text-sm/6 text-left font-medium text-gray-900">
