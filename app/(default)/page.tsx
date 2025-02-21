@@ -9,15 +9,18 @@ import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
 import Cta from "@/components/cta";
 import Accordion from "@/components/accordion";
+import HowTo from "@/components/how-to";
+import Industry from "@/components/industry";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <HowTo />
       <FeaturesPlanet />
-      <BusinessCategories />
-    
-      <LargeTestimonial />
+      <Industry />
+      {/*  <BusinessCategories /> 
+      <LargeTestimonial />*/}
       <Cta />
     </>
   );
