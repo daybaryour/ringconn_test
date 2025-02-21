@@ -93,13 +93,13 @@ export default function HeroHome() {
               </p>
               {/* <Classic /> */}
               <div className="flex flex-row gap-[32px] justify-center mb-8 text-gray-700">
-                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-200 rounded-full text-white text-sm hover:border-blue-500 shadow-md hover:bg-transparent hover:text-blue-500">
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-500 shadow-md hover:bg-transparent hover:text-blue-500">
                   Work autonomously 24/7
                 </p>
-                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-200 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
                   Human-like AI intelligence
                 </p>
-                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-200 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
                   Increase output, reduce costs
                 </p>
               </div>
