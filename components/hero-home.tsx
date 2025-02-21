@@ -119,7 +119,7 @@ export default function HeroHome() {
         <div className="text-center">
           <div className="mx-auto my-4 ">
             <form
-              className="bg-transparent w-full flex flex-col rounded-md p-3 flex items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+              className="bg-transparent w-full flex flex-col rounded-md p-3 items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
               onSubmit={handleSubmit}
             >
               {responseMessage && (
