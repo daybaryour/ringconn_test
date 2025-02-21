@@ -1176,6 +1176,11 @@ queue-microtask@^1.2.2:
   dependencies:
     scheduler "^0.25.0"
 
+react-international-phone@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/react-international-phone/-/react-international-phone-4.4.0.tgz"
+  integrity sha512-dxjgKrbwYBFtB8aL/x0K0SmtsABEnqeGaMwHm66aFLN3gZqtGDoY/MgKN3qaMPOrv5mwUxjrpYwBx9ea31C5vA==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"

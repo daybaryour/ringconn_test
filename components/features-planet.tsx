@@ -14,8 +14,16 @@ export default function FeaturesPlanet() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
             <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
-              RingConnect helps your teams work more efficiently together
+                Why Choose RingConnect?
+
             </h2>
+            <p
+								className="mt-4 text-lg text-gray-100"
+								data-aos="zoom-y-out"
+								data-aos-delay={300}
+							>
+								Create artificial intelligence powered, human-like AI voice agents ready to handle your phone calls 24/7, in 60 seconds or less.
+            </p>
           </div>
           {/* Planet */}
           <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
@@ -82,12 +90,11 @@ export default function FeaturesPlanet() {
                 >
                   <path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4Zm1 10a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Z" />
                 </svg>
-                <span>Instant Analytics</span>
+                <span>Intelligent conversations that convert</span>
               </h3>
               <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
+                Our Voice AI doesn’t just talk—it listens, learns, and adapts. Engage customers with highly personalised interactions that feel natural, leaving no opportunity unexplored.
+
               </p>
             </article>
             <article>
@@ -100,12 +107,11 @@ export default function FeaturesPlanet() {
                 >
                   <path d="M14.29 2.614a1 1 0 0 0-1.58-1.228L6.407 9.492l-3.199-3.2a1 1 0 1 0-1.414 1.415l4 4a1 1 0 0 0 1.496-.093l7-9ZM1 14a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H1Z" />
                 </svg>
-                <span>Metadata</span>
+                <span>Scale your outreach without sacrificing quality</span>
               </h3>
               <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
+                Reach thousands of leads simultaneously while delivering a human touch. RingConnect handles repetitive tasks such as scheduling meetings, updating CRM, following up with leads, so your team can focus on high-value activities.
+
               </p>
             </article>
             <article>
@@ -122,15 +128,13 @@ export default function FeaturesPlanet() {
                   />
                   <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm1.715-6.752a1 1 0 0 1 .57-1.916 8.014 8.014 0 0 1 5.383 5.383 1 1 0 1 1-1.916.57 6.014 6.014 0 0 0-4.037-4.037Zm4.037 7.467a1 1 0 1 1 1.916.57 8.014 8.014 0 0 1-5.383 5.383 1 1 0 1 1-.57-1.916 6.014 6.014 0 0 0 4.037-4.037Zm-7.467 4.037a1 1 0 1 1-.57 1.916 8.014 8.014 0 0 1-5.383-5.383 1 1 0 1 1 1.916-.57 6.014 6.014 0 0 0 4.037 4.037Z" />
                 </svg>
-                <span>SEO &amp; Performance</span>
+                <span>Real-time insights, real results</span>
               </h3>
               <p className="text-[15px] text-gray-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
+                Get actionable data from every conversation. Optimise your strategies with insights powered by AI-driven analytics and sentiment analysis.
               </p>
             </article>
-            <article>
+            {/* <article>
               <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
                 <svg
                   className="fill-blue-500"
@@ -183,7 +187,7 @@ export default function FeaturesPlanet() {
                 site with in-depth page view metrics like pages, referring
                 sites, and more.
               </p>
-            </article>
+            </article> */}
           </div>
         </div>
       </div>

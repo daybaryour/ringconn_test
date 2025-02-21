@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
-import 'react-phone-number-input/style.css';
+import 'react-international-phone/style.css';
 import Avatar01 from "@/public/images/avatar-01.jpg";
 import Avatar02 from "@/public/images/avatar-02.jpg";
 import Avatar03 from "@/public/images/avatar-03.jpg";
@@ -11,7 +11,7 @@ import Avatar04 from "@/public/images/avatar-04.jpg";
 import Avatar05 from "@/public/images/avatar-05.jpg";
 import Avatar06 from "@/public/images/avatar-06.jpg";
 import Classic from "@/components/visualizers/classic";
-import PhoneInput from 'react-phone-number-input';
+import { PhoneInput } from 'react-international-phone';
 import Modal from "./ui/modal";
 
 export default function HeroHome() {
@@ -116,13 +116,13 @@ export default function HeroHome() {
 							</div>
 						</div>
 						<h1
-							className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
+							className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl"
 							data-aos="zoom-y-out"
 							data-aos-delay={150}
 						>
-							AI-powered voice platform designed to help businesses{" "}
+							Drive sales // conversion with human-like 
 							<br className="max-lg:hidden" />
-							drive sales
+							conversations
 						</h1>
 						<div className="mx-auto max-w-3xl">
 							<p
@@ -130,15 +130,14 @@ export default function HeroHome() {
 								data-aos="zoom-y-out"
 								data-aos-delay={300}
 							>
-								RingConnect is a modern website builder powered by AI that
-								changes how companies create user interfaces together.
+								Create artificial intelligence powered, human-like AI voice agents ready to handle your phone calls 24/7, in 60 seconds or less.
 							</p>
-							<Classic />
+							{/* <Classic /> */}
 							<button
 								className="btn rounded-sm group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
 								id="open-action-btn" onClick={() => setOpen(true)}
 								>
-								Open Modal
+								See Demo
 							</button>
 						</div>
 					</div>
@@ -194,13 +193,18 @@ export default function HeroHome() {
 								</label>
 								<div className="flex-1 w-full items-center py-1 mb-4 rounded-lg">
 									<PhoneInput
-										international
-										defaultCountry="NG" // You can set a default country here
+										defaultCountry="ng" // You can set a default country here
 										name="phone"
-										id="phone"
+										// id="phone"
+										inputClassName="w-full outline-none text-lg border-none"
+										inputStyle={{ padding: '1.2rem 1rem', border:"none", fontSize: '1rem', width: '100%' }}
 										value={formData.phone}
 										onChange={(value) => setFormData({ ...formData, phone: value || "" })}
-										className="mt-2 px-3 border border-gray-300 rounded-md w-full"
+										className="mt-2 border-2 px-3 border-gray-200 rounded-md w-full rounded-lg"
+										countrySelectorStyleProps={{ 
+											className: "outline-none border-none", 
+											style: { border: "none" } }
+										}
 										/>
 								</div>
 								

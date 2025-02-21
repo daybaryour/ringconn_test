@@ -25,6 +25,7 @@
     "prettier-plugin-tailwindcss": "^0.6.5",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-international-phone": "^4.4.0",
     "react-phone-number-input": "^3.4.11",
     "tailwind-merge": "^2.6.0",
     "typescript": "^5.3.3"
