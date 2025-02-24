@@ -7,3 +7,13 @@
 @import "additional-styles/theme.css";
 
 @import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Switzer";
+  src: url("../../public/fonts/switzer/Switzer-Variable.ttf");
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../../public/fonts/geist/Geist-Variable.ttf");
+}

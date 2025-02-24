@@ -1,11 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import PageIllustration from "@/components/page-illustration";
 import "react-international-phone/style.css";
+import Avatar01 from "@/public/images/avatar-01.jpg";
+import Avatar02 from "@/public/images/avatar-02.jpg";
+import Avatar03 from "@/public/images/avatar-03.jpg";
+import Avatar04 from "@/public/images/avatar-04.jpg";
+import Avatar05 from "@/public/images/avatar-05.jpg";
+import Avatar06 from "@/public/images/avatar-06.jpg";
+import Classic from "@/components/visualizers/classic";
 import { PhoneInput } from "react-international-phone";
 import Modal from "./ui/modal";
-import CallIcon from "./ui/callIIcon";
-import Carousel from "./ui/carousel";
 
 export default function HeroHome() {
   const [formData, setFormData] = useState({
@@ -58,66 +65,56 @@ export default function HeroHome() {
   };
 
   return (
-    <section className="mt-[175px]">
-      {/* Hero content */}
-      <div className="bg-transparent">
-        {/* Section header */}
-        <div className="text-center flex flex-col gap-[11px] h-auto lg:h-[325px] w-full md:w-[510px] mx-auto">
-          <div className="mx-auto">
-            <Carousel />
-          </div>
-          <div>
+    <section className="relative">
+      <PageIllustration />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        {/* Hero content */}
+        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+          {/* Section header */}
+          <div className="pb-12 text-center md:pb-16">
             <h1
+              className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-5xl"
               data-aos="zoom-y-out"
               data-aos-delay={150}
-              className="bg-gradient-radial from-[#FFFFFF] to-[#758599] bg-clip-text"
             >
-              <span className="font-[500] text-[36px] md:text-[60px] leading-[50px] md:leading-[72px] font-switzer text-transparent tracking-[-2.5%] w-full">
-                AI Voice Calls that <br /> Drive Revenue
-              </span>
+              AI Voice Calls that Drive
+              <br className="max-lg:hidden" />
+              Revenue
             </h1>
+            <div className="mx-auto max-w-3xl">
+              <p
+                className="mb-8 text-lg text-gray-700"
+                data-aos="zoom-y-out"
+                data-aos-delay={300}
+              >
+                Manage end-to-end calling operations—from qualifying prospects
+                to booking meetings, sending reminders, and even supporting
+                retention and upselling with enterprise-grade Voice AI.
+              </p>
+              {/* <Classic /> */}
+              <div className="flex flex-row gap-[32px] justify-center mb-8 text-gray-700">
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-500 shadow-md hover:bg-transparent hover:text-blue-500">
+                  Work autonomously 24/7
+                </p>
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
+                  Human-like AI intelligence
+                </p>
+                <p className="bg-blue-600 py-4 px-6 border-[2px] border-blue-100 rounded-full text-white text-sm hover:border-blue-600 shadow-md hover:bg-transparent hover:text-blue-500">
+                  Increase output, reduce costs
+                </p>
+              </div>
+              <button
+                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                id="open-action-btn"
+                onClick={() => setOpen(true)}
+              >
+                Try Now
+              </button>
+            </div>
           </div>
-
-          <div className="mx-auto">
-            <p
-              className="text-[12px] px-[15%] md:px-0 md:text-[16px] text-[#758599] font-switzer leading-[15.84px] md:leading-[28px] font-[400]"
-              data-aos="zoom-y-out"
-              data-aos-delay={300}
-            >
-              Manage end-to-end calling operations—from qualifying prospects to
-              booking meetings, sending reminders, and even supporting retention
-              with enterprise-grade Voice AI.
-            </p>
-            {/* <Classic /> */}
-          </div>
+          {/* Hero image */}
         </div>
-
-        <div
-          style={{ backgroundImage: "url(images/call.gif)" }}
-          className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] hover:bg-[164px__140px] bg-[0px__0px] hover:bg-[-5px_-16px] bg-center"
-        >
-          <div className="mx-auto bg-[#C3DEFF] rounded-full size-[106px] flex justify-center items-center cursor-pointer">
-            <CallIcon />
-          </div>
-        </div>
-
-        <button
-          className="transtion group flex h-[30px] w-fit mx-auto text-[13px] font-switzer font-[400] leading-[19.5px] items-center justify-center rounded-full bg-gradient-to-r from-transparent via-slate-300 to-transparent p-[1px] text-[#758599] duration-300 hover:bg-gradient-to-l mt-[20px]"
-          onClick={() => setOpen(true)}
-        >
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#070707] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-950 group-hover:to-transparent group-hover:transition group-hover:duration-300 group-hover:ease-in-out px-4">
-            Give it a try!
-          </div>
-        </button>
-
-        <div
-          className="w-full h-[87px] lg:h-[187px] lg:bg-cover lg:bg-top bg-no-repeat md:bg-[150%__300px] md:bg-[-205px_-40px] bg-[140%__300px] bg-[-80px_-30px]"
-          style={{
-            backgroundImage: "url(images/blur.png)",
-          }}
-        ></div>
       </div>
-
       <Modal open={open} onClose={() => resetModal()}>
         <div className="text-center">
           <div className="mx-auto my-4 ">

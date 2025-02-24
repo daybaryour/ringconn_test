@@ -3,7 +3,6 @@ import {
   Cpu,
   CreditCard,
   MapPinHouse,
-  Microchip,
   ShoppingBag,
 } from "lucide-react";
 

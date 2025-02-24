@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         mono: ["Roboto Mono", "monospace"],
+        switzer: ["Switzer", "san-serif"],
+        geist: ["Geist", "san-serif"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],
@@ -95,6 +97,18 @@ module.exports = {
           "0%": { strokeDasharray: "0 100", strokeDashoffset: "0" },
           "100%": { strokeDasharray: "100 0", strokeDashoffset: "0" },
         },
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        slideUp: {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        slideUp: "slideUp 0.5s ease-in-out",
       },
     },
   },

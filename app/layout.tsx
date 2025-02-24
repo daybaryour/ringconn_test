@@ -1,13 +1,5 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
 export const metadata = {
   title: "Ringconnect",
   description: "AI powered voice platform to help businesses drive sales",
@@ -21,7 +13,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
+        className={`antialiased bg-[#070707] bg-no-repeat`}
+        style={{
+          backgroundImage: "url(images/PerspectiveGrid.png)",
+          backgroundPositionY: "320px",
+          //backgroundPositionX: "-2816.96px",
+          backgroundSize: "100% 784.1819458007812px",
+        }}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}

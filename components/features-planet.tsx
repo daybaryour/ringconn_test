@@ -1,34 +1,34 @@
-import Image from "next/image";
-import PlanetImg from "@/public/images/planet.png";
-import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
-import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
-import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
-import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
-import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
-import { Calendar1 } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-16 text-center md:pb-20">
-            <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
+    <section className="relative px-[20px] md:px-[112px] pt-[24px] pb-[96] md:!py-[96px]">
+      <div className="w-full flex flex-col gap-[48px] md:gap-[56px]">
+        {/* Section header */}
+        <div className="md:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
+          <h1 className="bg-gradient-radial from-[#FFFFFF] to-[#758599] bg-clip-text w-full text-center">
+            <span className="font-[500] text-[30px] md:text-[40px] text-center leading-[60px] md:leading-[52.8px] font-switzer text-transparent tracking-[-2.5%]">
               Use cases
-            </h2>
-            <p
-              className="mt-4 text-lg text-gray-100"
-              data-aos="zoom-y-out"
-              data-aos-delay={300}
-            >
-              Manage end-to-end calling operations—from qualifying prospects to
-              booking meetings, sending reminders, and even supporting retention
-              and upselling.
-            </p>
-          </div>
-          {/* Planet */}
-          {/*           <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
+            </span>
+          </h1>
+          <p
+            className="font-switzer font-[400] text-[14px] md:text-[16px] md:leading-[28px] leading-[24px] text-[#758599] w-full md:w-[640px]"
+            data-aos="zoom-y-out"
+            data-aos-delay={300}
+          >
+            Manage end-to-end calling operations—from qualifying prospects to
+            booking meetings, sending reminders, and even supporting retention
+            and upselling.
+          </p>
+        </div>
+        {/* Planet */}
+        {/*           <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
             <div className="text-center">
               <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-gradient-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,theme(colors.blue.500),transparent)]">
                 <Image
@@ -80,109 +80,221 @@ export default function FeaturesPlanet() {
               </div>
             </div>
           </div> */}
-          {/* Grid */}
-          <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:bg-gray-800 [&>*]:before:[block-size:100vh] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:bg-gray-800 [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100vw] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-10">
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Zm2-4a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4Zm1 10a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Z" />
-                </svg>
+
+        {/* Grid */}
+        <div className="grid overflow-hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[56px]">
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="none"
+              viewBox="0 0 32 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <path
+                fill="#758599"
+                d="M28 32H16a1.334 1.334 0 0 1-1.333-1.333V28A1.333 1.333 0 0 1 16 26.667h12A1.333 1.333 0 0 1 29.334 28v2.667A1.333 1.333 0 0 1 28 32"
+              ></path>
+              <path
+                fill="#4E5966"
+                d="M28 0H4a1.333 1.333 0 0 0-1.333 1.333V4A1.333 1.333 0 0 0 4 5.333h24A1.333 1.333 0 0 0 29.334 4V1.333A1.333 1.333 0 0 0 28 0"
+              ></path>
+              <path
+                fill="#C3DEFF"
+                d="M28 8H4a1.333 1.333 0 0 0-1.333 1.333v13.334A1.333 1.333 0 0 0 4 24h24a1.333 1.333 0 0 0 1.334-1.333V9.333A1.333 1.333 0 0 0 28 8"
+              ></path>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
                 <span>Lead Outreach</span>
               </h3>
-              <p className="text-[15px] text-gray-400">
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
                 RingConnect engages prospects around the clock, scaling your
                 outreach while maintaining genuine connections with every lead
                 at every touchpoint.
               </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M14.29 2.614a1 1 0 0 0-1.58-1.228L6.407 9.492l-3.199-3.2a1 1 0 1 0-1.414 1.415l4 4a1 1 0 0 0 1.496-.093l7-9ZM1 14a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H1Z" />
-                </svg>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              fill="none"
+              viewBox="0 0 33 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <path
+                fill="#C3DEFF"
+                d="M12.333 13.333H2.999A1.333 1.333 0 0 1 1.666 12V2.667a1.333 1.333 0 0 1 1.333-1.334h9.334a1.333 1.333 0 0 1 1.333 1.334V12a1.333 1.333 0 0 1-1.333 1.333M12.333 30.667H2.999a1.334 1.334 0 0 1-1.333-1.334V20a1.333 1.333 0 0 1 1.333-1.334h9.334A1.334 1.334 0 0 1 13.666 20v9.333a1.334 1.334 0 0 1-1.333 1.334"
+              ></path>
+              <path
+                fill="#4E5966"
+                d="M17.666 2.667h13.333v2.666H17.666zM31 20H17.665v2.667h13.333z"
+              ></path>
+              <path
+                fill="#758599"
+                d="M31 26.667H17.665v2.666h13.333zM31 9.333H17.665V12h13.333z"
+              ></path>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
                 <span>Inbound Lead Qualification</span>
               </h3>
-              <p className="text-[15px] text-gray-400">
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
                 Not every lead is ready to buy. RingConnect filters out
                 low-intent prospects, ensuring your sales team only spends time
-                on high-value opportunities.
+                on high-value opportunities
               </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <Calendar1 size={16} stroke="#3b82f6" />
-                <span>Appointment Setting</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                RingConnect books, confirms, and reminds prospects of upcoming
-                calls—so your team always shows up prepared.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M8 0a1 1 0 0 1 1 1v14a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Zm6 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1a1 1 0 1 1 0 2h-1a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h1a1 1 0 1 1 0 2h-1ZM1 1a1 1 0 0 0 0 2h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 1 0 0 2h1a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H1Z" />
-                </svg>
-                <span>Customer Support</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Handle customer queries without human intervention. RingConnect
-                resolves simple requests and escalates complex issues when
-                needed.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M10.284.33a1 1 0 1 0-.574 1.917 6.049 6.049 0 0 1 2.417 1.395A1 1 0 0 0 13.5 2.188 8.034 8.034 0 0 0 10.284.33ZM6.288 2.248A1 1 0 0 0 5.718.33 8.036 8.036 0 0 0 2.5 2.187a1 1 0 0 0 1.372 1.455 6.036 6.036 0 0 1 2.415-1.395ZM1.42 5.401a1 1 0 0 1 .742 1.204 6.025 6.025 0 0 0 0 2.79 1 1 0 0 1-1.946.462 8.026 8.026 0 0 1 0-3.714A1 1 0 0 1 1.421 5.4Zm2.452 6.957A1 1 0 0 0 2.5 13.812a8.036 8.036 0 0 0 3.216 1.857 1 1 0 0 0 .574-1.916 6.044 6.044 0 0 1-2.417-1.395Zm9.668.04a1 1 0 0 1-.041 1.414 8.033 8.033 0 0 1-3.217 1.857 1 1 0 1 1-.571-1.917 6.035 6.035 0 0 0 2.415-1.395 1 1 0 0 1 1.414.042Zm2.242-6.255a1 1 0 1 0-1.946.462 6.03 6.03 0 0 1 0 2.79 1 1 0 1 0 1.946.462 8.022 8.022 0 0 0 0-3.714Z" />
-                </svg>
-                <span>Lead Revival</span>
-              </h3>
-              <p className="text-[15px] text-gray-400">
-                Most businesses lose potential deals due to neglected leads.
-                RingConnect re-engages old contacts, reviving opportunities in
-                your CRM.
-              </p>
-            </article>
-            <article>
-              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
-                <svg
-                  className="fill-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
-                >
-                  <path d="M9 1a1 1 0 1 0-2 0v6a1 1 0 0 0 2 0V1ZM4.572 3.08a1 1 0 0 0-1.144-1.64A7.987 7.987 0 0 0 0 8a8 8 0 0 0 16 0c0-2.72-1.36-5.117-3.428-6.56a1 1 0 1 0-1.144 1.64A5.987 5.987 0 0 1 14 8 6 6 0 1 1 2 8a5.987 5.987 0 0 1 2.572-4.92Z" />
-                </svg>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              fill="none"
+              viewBox="0 0 33 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <g clipPath="url(#clip0_1281_5150)">
+                <path
+                  fill="#758599"
+                  d="M8.667 13.333h-8l4-5.333zm0 5.334h-8l4 5.333z"
+                ></path>
+                <path
+                  fill="#4E5966"
+                  d="M31.334 0h-8v32h8a1.334 1.334 0 0 0 1.333-1.333V1.333A1.334 1.334 0 0 0 31.334 0"
+                ></path>
+                <path
+                  fill="#D1D6DD"
+                  d="M20.667 0h-8a1.333 1.333 0 0 0-1.333 1.333v29.334A1.333 1.333 0 0 0 12.667 32h8z"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_1281_5150">
+                  <path fill="#fff" d="M32.667 0h-32v32h32z"></path>
+                </clipPath>
+              </defs>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
                 <span>Account Management</span>
               </h3>
-              <p className="text-[15px] text-gray-400">
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
                 Nurture customer relationships at scale. RingConnect checks in
                 with clients, identifies upsell opportunities, and ensures
                 ongoing engagement.
               </p>
-            </article>
-          </div>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="none"
+              viewBox="0 0 32 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <path
+                fill="#758599"
+                d="M6.666 1.333h-4a1.333 1.333 0 0 0-1.333 1.334v26.666a1.333 1.333 0 0 0 1.333 1.334h4z"
+              ></path>
+              <path
+                fill="#4E5966"
+                d="M9.333 30.667h13.333V1.333H9.333zM16 25.333a1.333 1.333 0 1 1 0-2.666 1.333 1.333 0 0 1 0 2.666m0-18.666a1.333 1.333 0 1 1 0 2.666 1.333 1.333 0 0 1 0-2.666m0 8a1.334 1.334 0 1 1 0 2.667 1.334 1.334 0 0 1 0-2.667"
+              ></path>
+              <path
+                fill="#C3DEFF"
+                d="M29.333 1.333h-4v29.334h4a1.333 1.333 0 0 0 1.333-1.334V2.667a1.333 1.333 0 0 0-1.333-1.334"
+              ></path>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
+                <span>Lead Revival</span>
+              </h3>
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
+                Most businesses lose potential deals due to neglected leads.
+                RingConnect re-engages old contacts, reviving opportunities in
+                your CRM.
+              </p>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="none"
+              viewBox="0 0 32 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <path fill="#4E5966" d="M5.333 1.333h25.333l-4 8H1.333z"></path>
+              <path fill="#C3DEFF" d="M5.333 12h25.333l-4 8H1.333z"></path>
+              <path fill="#758599" d="M5.333 22.667h25.333l-4 8H1.333z"></path>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
+                <span>Customer Support</span>
+              </h3>
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
+                Handle customer queries without human intervention. RingConnect
+                resolves simple requests and escalates complex issues when
+                needed.
+              </p>
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-[24px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="none"
+              viewBox="0 0 32 32"
+              className="size-[18.33px] md:size-[32px]"
+            >
+              <path
+                fill="#C3DEFF"
+                d="M30.666 8V2.667a1.333 1.333 0 0 0-1.333-1.334H2.666a1.333 1.333 0 0 0-1.333 1.334V8z"
+              ></path>
+              <path
+                fill="#758599"
+                d="M1.333 10.667v18.666a1.333 1.333 0 0 0 1.333 1.334h6.667v-20z"
+              ></path>
+              <path
+                fill="#4E5966"
+                d="M12 30.667h17.333a1.333 1.333 0 0 0 1.334-1.334V10.667H12z"
+              ></path>
+            </svg>
+            <div className="flex flex-col gap-[8px]">
+              <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
+                <span>Appointment Setting</span>
+              </h3>
+              <p
+                className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
+              >
+                RingConnect books, confirms, and reminds prospects of upcoming
+                calls—so your team always shows up prepared.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>

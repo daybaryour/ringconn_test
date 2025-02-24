@@ -1,52 +1,27 @@
-import Image from "next/image";
-import Stripes from "@/public/images/stripes-dark.svg";
-
+"use client";
 export default function Cta() {
   return (
-    <section>
-      <div className="mx-auto mb-[48px] max-w-6xl px-4 sm:px-6">
-        <div
-          className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
-          data-aos="zoom-y-out"
-        >
-          {/* Glow */}
-          <div
-            className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
-            aria-hidden="true"
-          >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-blue-500 blur-3xl" />
+    <section className="relative bottom-0 mt-[60px]">
+      <div
+        className="w-full lg:w-[1192px] h-[316px] lg:pt-[64px] lg:px-[72px] pt-[25px] px-[46px] bg-no-repeat mx-auto border-[#C3DEFF] border-[2px] border-b-0 rounded-t-[60px] relative z-10"
+        style={{
+          backgroundImage: "url(images/footer.png)",
+          backgroundSize: "1192px 173px",
+        }}
+      >
+        <div className="flex flex-col gap-[32px] md:flex-row lg:justify-between justify-center">
+          <div>
+            <h1 className="font-switzer text-center md:text-left font-[500] lg:text-[32px] text-[18px] lg:leading-[31.2px] leading-[24px] tracking-[-1.2px] text-[#F3F3F3]">
+              Scale your business, not your headcount
+            </h1>
+            <p className="text-center md:text-left text-[#758599] font-switzer font-[400] text-[12px] lg:text-[16px] leading-[24px]">
+              Let’s have a chat on how Ringconnect can help your business
+            </p>
           </div>
-          {/* Stripes illustration */}
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-            aria-hidden="true"
-          >
-            <Image
-              className="max-w-none"
-              src={Stripes}
-              width={768}
-              height={432}
-              alt="Stripes"
-            />
-          </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.700/.7),transparent)1] md:mb-12 md:text-4xl">
-              RingConnect integrates with your entire stack.
-            </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
-                className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
-              >
-                <span className="relative inline-flex items-center">
-                  Try Now{" "}
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
-              </a>
-            </div>
-          </div>
+
+          <button className="bg-[#C3DEFF] text-[#333F48] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[141px] rounded-[4px] hidden md:block">
+            Book a demo
+          </button>
         </div>
       </div>
     </section>
