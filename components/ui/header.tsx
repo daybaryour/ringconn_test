@@ -14,11 +14,13 @@ export default function Header() {
           />
         </div>
 
-        <div className="bg-[#C3DEFF] w-[112px] md:w-[126px] h-[30px] flex items-center rounded-[4px]">
-          <p className="text-center text-[10px] md:text-[13px] font-switzer font-[400] w-full cursor-pointer">
-            Book a demo
-          </p>
-        </div>
+        <Link href={"https://www.cal.com/ringconnect/demo"} target="_blank">
+          <div className="bg-[#C3DEFF] w-[112px] md:w-[126px] h-[30px] flex items-center rounded-[4px]">
+            <p className="text-center text-[10px] md:text-[13px] font-switzer font-[400] w-full cursor-pointer">
+              Book a demo
+            </p>
+          </div>
+        </Link>
 
         {/* Desktop sign in links */}
         {/* <ul className="flex flex-1 items-center justify-end gap-3">

@@ -70,10 +70,10 @@ export default function HeroHome() {
             <h1
               data-aos="zoom-y-out"
               data-aos-delay={150}
-              className="bg-gradient-radial from-[#FFFFFF] to-[#758599] bg-clip-text"
+              className="bg-gradient-radial from-[#FFFFFF] from-20% via-[#758599] to-[#758599] bg-clip-text"
             >
               <span className="font-[500] text-[36px] md:text-[60px] leading-[50px] md:leading-[72px] font-switzer text-transparent tracking-[-2.5%] w-full">
-                AI Voice Calls that <br /> Drive Revenue
+                AI Voice Calls that <br /> Drives Revenue
               </span>
             </h1>
           </div>
@@ -94,9 +94,9 @@ export default function HeroHome() {
 
         <div
           style={{ backgroundImage: "url(images/call.gif)" }}
-          className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] hover:bg-[164px__140px] bg-[0px__0px] hover:bg-[-5px_-16px] bg-center"
+          className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] hover:bg-[164px__138px] bg-[0px__0px] hover:bg-[-5px_-15px] bg-center"
         >
-          <div className="mx-auto bg-[#C3DEFF] rounded-full size-[106px] flex justify-center items-center cursor-pointer">
+          <div className="mx-auto bg-[#C3DEFF] rounded-full size-[106px] flex justify-center items-center cursor-pointer shadow-[1px_1px_15px_1px_#f1f5f9]">
             <CallIcon />
           </div>
         </div>
