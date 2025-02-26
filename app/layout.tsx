@@ -1,8 +1,9 @@
 import "./css/style.css";
 
 export const metadata = {
-  title: "Ringconnect",
-  description: "AI powered voice platform to help businesses drive sales",
+  title: "RingConnect: Enterprise-grade Voice AI for Businesses",
+  description:
+    "RingConnect helps businesses automate sales outreach, lead qualification, appointment booking, customer support, and account management—all through AI-powered voice interactions and calls in over 30 languages.",
 };
 
 export default function RootLayout({

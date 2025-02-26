@@ -103,6 +103,7 @@ module.exports = {
       },
       screens: {
         lg: "1212px",
+        sd: "540px",
       },
     },
   },

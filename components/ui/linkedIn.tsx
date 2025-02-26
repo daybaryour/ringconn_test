@@ -4,9 +4,10 @@ import Link from "next/link";
 export default function LinkedIn({ className }: { className?: any }) {
   return (
     <Link
-      href="https://www.linkedin.com/ringconnect"
+      href="https://www.linkedin.com/company/ringconnect"
       className="inline-flex align-center"
       aria-label="Cruip"
+      target="_blank"
     >
       <svg
         width="20"

@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-
 export default function HowTo() {
   return (
     <div
@@ -15,11 +11,11 @@ export default function HowTo() {
       <div className="md:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
         <h1 className="bg-gradient-radial from-[#FFFFFF] from-10% via-[#758599] to-[#758599] bg-clip-text w-full text-center">
           <span className="font-[500] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[52.8px] font-switzer text-transparent tracking-[-2.5%] capitalize">
-            Scale your business, not your headcount
+            Setup AI voice call in minutes
           </span>
         </h1>
         <p
-          className="font-switzer font-[400] text-[14px] md:text-[16px] md:leading-[28px] leading-[24px] text-[#758599] w-full md:w-[640px]"
+          className="font-switzer font-[400] text-[12px] sd:text-[14px] md:text-[16px] leading-[15.84px] md:leading-[28px] sd:leading-[24px] text-[#758599] w-full lg:w-[520px] md:px-[10%] px-[12%] lg:px-0"
           data-aos="zoom-y-out"
           data-aos-delay={300}
         >
@@ -27,7 +23,7 @@ export default function HowTo() {
           ready to handle your phone calls 24/7, in 60 seconds or less.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center mt-[56px] place-items-center  w-full gap-[16px] md:gap-[24px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center justify-items-center mt-[56px] w-full lg:w-[1236px] gap-[16px] md:gap-[24px] lg:mx-auto">
         <div
           className={`bg-[#161616] rounded-[12px] border border-[#252525] h-[187px] w-[318px] md:h-[276px] md:w-[606px] bg-no-repeat md:bg-[458.6170349121094px__270px] md:bg-[327px_25px] bg-[170px_25px] bg-[293.8546142578125px__173px] p-[16px] md:p-[25px]`}
           style={{

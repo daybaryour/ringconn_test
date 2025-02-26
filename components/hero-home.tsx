@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "react-international-phone/style.css";
 import { PhoneInput } from "react-international-phone";
 import Modal from "./ui/modal";
 import CallIcon from "./ui/callIIcon";
 import Carousel from "./ui/carousel";
+import { ModalContex } from "@/app/(default)/layout";
+import Link from "next/link";
 
 export default function HeroHome() {
   const [formData, setFormData] = useState({
@@ -16,7 +18,7 @@ export default function HeroHome() {
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useContext(ModalContex);
   const [isVisible, setIsVisible] = useState(false);
   const [closeSuccessModal, setCloseSuccessModal] = useState("hidden");
 
@@ -26,7 +28,7 @@ export default function HeroHome() {
   };
 
   const resetModal = () => {
-    setOpen(false);
+    setOpen!(false);
     setFormData({ firstname: "", lastname: "", phone: "", email: "" });
     setResponseMessage("");
     setCloseSuccessModal("hidden");
@@ -80,7 +82,7 @@ export default function HeroHome() {
 
           <div className="mx-auto">
             <p
-              className="text-[12px] px-[15%] md:px-0 md:text-[16px] text-[#758599] font-switzer leading-[15.84px] md:leading-[28px] font-[400]"
+              className="text-[12px] md:w-[449px] px-[15%] sd:px-[25%] md:px-0 md:text-[16px] text-[#758599] font-switzer leading-[15.84px] md:leading-[28px] font-[400]"
               data-aos="zoom-y-out"
               data-aos-delay={300}
             >
@@ -94,17 +96,17 @@ export default function HeroHome() {
 
         <div
           style={{ backgroundImage: "url(images/call.gif)" }}
-          className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] hover:bg-[164px__138px] bg-[0px__0px] hover:bg-[-5px_-15px] bg-center"
+          className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] bg-[164px__138px] bg-[-5px_-15px]"
         >
-          <div className="mx-auto bg-[#C3DEFF] rounded-full size-[106px] flex justify-center items-center cursor-pointer shadow-[1px_1px_15px_1px_#f1f5f9]">
+          <div
+            className="mx-auto bg-[#C3DEFF] hover:bg-[#b8d8ff] rounded-full size-[106px] flex justify-center items-center cursor-pointer shadow-[1px_1px_5px_1px_#f1f5f9]"
+            onClick={() => setOpen!(true)}
+          >
             <CallIcon />
           </div>
         </div>
 
-        <button
-          className="transtion group flex h-[30px] w-fit mx-auto text-[13px] font-switzer font-[400] leading-[19.5px] items-center justify-center rounded-full bg-gradient-to-r from-transparent via-slate-300 to-transparent p-[1px] text-[#758599] duration-300 hover:bg-gradient-to-l mt-[20px]"
-          onClick={() => setOpen(true)}
-        >
+        <button className="transtion group flex h-[30px] w-fit mx-auto text-[13px] font-switzer font-[400] leading-[19.5px] items-center justify-center rounded-full bg-gradient-to-r from-transparent via-slate-300 to-transparent p-[1px] text-[#758599] duration-300 hover:bg-gradient-to-l mt-[20px] cursor-default">
           <div className="flex h-full w-full items-center justify-center rounded-full bg-[#070707] transition duration-300 ease-in-out group-hover:bg-gradient-to-br group-hover:from-gray-950 group-hover:to-transparent group-hover:transition group-hover:duration-300 group-hover:ease-in-out px-4">
             Give it a try!
           </div>
@@ -118,7 +120,7 @@ export default function HeroHome() {
         ></div>
       </div>
 
-      <Modal open={open} onClose={() => resetModal()}>
+      <Modal open={open!} onClose={() => resetModal()}>
         <div className="text-center">
           <div className="mx-auto my-4 ">
             <form
@@ -289,6 +291,20 @@ export default function HeroHome() {
           </div>
         </div>
       </Modal>
+
+      <div className="fixed flex justify-between bottom-0 min-h-[40px] h-auto pb-[20px] md:hidden w-full left-0 bg-green z-50 px-[5%] bg-gradient-to-t from-[#070707] from-40% to-transparent">
+        <Link href={"#"} onClick={() => setOpen!(true)}>
+          <button className="bg-[#626F80] text-[#FFFFFF] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[141px] rounded-[4px]">
+            Give it a try
+          </button>
+        </Link>
+
+        <Link href={"https://www.cal.com/ringconnect/demo"} target="_blank">
+          <button className="bg-[#C3DEFF] text-[#333F48] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[141px] rounded-[4px]">
+            Book a demo
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }

@@ -7,6 +7,7 @@ export default function X({ className }: { className?: any }) {
       href="https://www.x.com/ringconnect"
       className="inline-flex align-center"
       aria-label="Cruip"
+      target="_blank"
     >
       <svg
         width="20"

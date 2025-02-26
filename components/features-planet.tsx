@@ -8,17 +8,17 @@ const inter = Inter({
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative px-[20px] md:px-[112px] pt-[24px] pb-[96] md:!py-[96px]">
+    <section className="relative px-[25px] sd:px-[50px] md:px-[112px] pt-[24px] pb-[96] sd:!py-[96px] bg-[#070707]">
       <div className="w-full flex flex-col gap-[48px] md:gap-[56px]">
         {/* Section header */}
-        <div className="md:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
+        <div className="sd:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
           <h1 className="bg-gradient-radial from-[#FFFFFF] from-10% via-[#758599] to-[#758599] bg-clip-text w-full text-center">
             <span className="font-[500] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[52.8px] font-switzer text-transparent tracking-[-2.5%] capitalize">
-              Built to meet your business needs
+              Built to meet your <br className="hidden" /> business needs
             </span>
           </h1>
           <p
-            className="font-switzer font-[400] text-[14px] md:text-[16px] md:leading-[28px] leading-[24px] text-[#758599] w-full md:w-[640px]"
+            className="font-switzer font-[400] text-[12px] sd:text-[14px] md:text-[16px] md:leading-[28px] sd:leading-[24px] leading:-[15.84px] text-[#758599] w-full lg:w-[640px] md:px-[8%] sd:px-[13%] px-[16%]"
             data-aos="zoom-y-out"
             data-aos-delay={300}
           >
@@ -82,7 +82,7 @@ export default function FeaturesPlanet() {
           </div> */}
 
         {/* Grid */}
-        <div className="grid overflow-hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[56px]">
+        <div className="grid overflow-hidden grid-cols-1 sd:grid-cols-2 lg:grid-cols-3 gap-[56px]">
           <article className="flex flex-col gap-[24px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -158,42 +158,34 @@ export default function FeaturesPlanet() {
           <article className="flex flex-col gap-[24px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="33"
+              width="32"
               height="32"
               fill="none"
-              viewBox="0 0 33 32"
+              viewBox="0 0 32 32"
               className="size-[18.33px] md:size-[32px]"
             >
-              <g clipPath="url(#clip0_1281_5150)">
-                <path
-                  fill="#758599"
-                  d="M8.667 13.333h-8l4-5.333zm0 5.334h-8l4 5.333z"
-                ></path>
-                <path
-                  fill="#4E5966"
-                  d="M31.334 0h-8v32h8a1.334 1.334 0 0 0 1.333-1.333V1.333A1.334 1.334 0 0 0 31.334 0"
-                ></path>
-                <path
-                  fill="#D1D6DD"
-                  d="M20.667 0h-8a1.333 1.333 0 0 0-1.333 1.333v29.334A1.333 1.333 0 0 0 12.667 32h8z"
-                ></path>
-              </g>
-              <defs>
-                <clipPath id="clip0_1281_5150">
-                  <path fill="#fff" d="M32.667 0h-32v32h32z"></path>
-                </clipPath>
-              </defs>
+              <path
+                fill="#C3DEFF"
+                d="M30.666 8V2.667a1.333 1.333 0 0 0-1.333-1.334H2.666a1.333 1.333 0 0 0-1.333 1.334V8z"
+              ></path>
+              <path
+                fill="#758599"
+                d="M1.333 10.667v18.666a1.333 1.333 0 0 0 1.333 1.334h6.667v-20z"
+              ></path>
+              <path
+                fill="#4E5966"
+                d="M12 30.667h17.333a1.333 1.333 0 0 0 1.334-1.334V10.667H12z"
+              ></path>
             </svg>
             <div className="flex flex-col gap-[8px]">
               <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
-                <span>Account Management</span>
+                <span>Appointment Setting</span>
               </h3>
               <p
                 className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
               >
-                Nurture customer relationships at scale. RingConnect checks in
-                with clients, identifies upsell opportunities, and ensures
-                ongoing engagement.
+                RingConnect books, confirms, and reminds prospects of upcoming
+                calls—so your team always shows up prepared.
               </p>
             </div>
           </article>
@@ -264,34 +256,42 @@ export default function FeaturesPlanet() {
           <article className="flex flex-col gap-[24px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
+              width="33"
               height="32"
               fill="none"
-              viewBox="0 0 32 32"
+              viewBox="0 0 33 32"
               className="size-[18.33px] md:size-[32px]"
             >
-              <path
-                fill="#C3DEFF"
-                d="M30.666 8V2.667a1.333 1.333 0 0 0-1.333-1.334H2.666a1.333 1.333 0 0 0-1.333 1.334V8z"
-              ></path>
-              <path
-                fill="#758599"
-                d="M1.333 10.667v18.666a1.333 1.333 0 0 0 1.333 1.334h6.667v-20z"
-              ></path>
-              <path
-                fill="#4E5966"
-                d="M12 30.667h17.333a1.333 1.333 0 0 0 1.334-1.334V10.667H12z"
-              ></path>
+              <g clipPath="url(#clip0_1281_5150)">
+                <path
+                  fill="#758599"
+                  d="M8.667 13.333h-8l4-5.333zm0 5.334h-8l4 5.333z"
+                ></path>
+                <path
+                  fill="#4E5966"
+                  d="M31.334 0h-8v32h8a1.334 1.334 0 0 0 1.333-1.333V1.333A1.334 1.334 0 0 0 31.334 0"
+                ></path>
+                <path
+                  fill="#D1D6DD"
+                  d="M20.667 0h-8a1.333 1.333 0 0 0-1.333 1.333v29.334A1.333 1.333 0 0 0 12.667 32h8z"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_1281_5150">
+                  <path fill="#fff" d="M32.667 0h-32v32h32z"></path>
+                </clipPath>
+              </defs>
             </svg>
             <div className="flex flex-col gap-[8px]">
               <h3 className="font-[500] text-[#DEDEDE] text-[16px] md:text-[18px] font-switzer leading-[21.12px] md:leading-[23.76px]">
-                <span>Appointment Setting</span>
+                <span>Account Management</span>
               </h3>
               <p
                 className={`${inter.variable} text-[14px] md:text-[16px] leading-[24px] font-[400] text-[#758599]`}
               >
-                RingConnect books, confirms, and reminds prospects of upcoming
-                calls—so your team always shows up prepared.
+                Nurture customer relationships at scale. RingConnect checks in
+                with clients, identifies upsell opportunities, and ensures
+                ongoing engagement.
               </p>
             </div>
           </article>

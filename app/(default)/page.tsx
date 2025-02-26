@@ -1,8 +1,4 @@
-export const metadata = {
-  title: "Home - Ringconnect",
-  description: "Page description",
-};
-
+"use client";
 import Hero from "@/components/hero-home";
 import FeaturesPlanet from "@/components/features-planet";
 import Cta from "@/components/cta";
@@ -12,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <HowTo />
       <FeaturesPlanet />
+      <HowTo />
       <Cta />
     </>
   );
