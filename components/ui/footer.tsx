@@ -8,13 +8,14 @@ import { useContext } from "react";
 import { ModalContex } from "@/app/(default)/layout";
 
 export default function Footer() {
-  const { setOpen } = useContext(ModalContex);
+  const { setOpen, bottomTargetRef } = useContext(ModalContex);
   return (
     <footer>
       <div className="w-full bg-transparent relative h-auto md:h-[200px] z-30 mt-[-200px]">
         <div className=" w-full lg:w-[1192px] bg-gradient-to-t from-black from-85% to-transparent bg-opacity-20 h-full mx-auto px-[72px] pt-[10px] md:pt-0">
           <div className="flex gap-[16px] md:hidden mx-auto justify-center">
             <Link
+              ref={bottomTargetRef}
               href={"#"}
               className="md:hidden"
               onClick={() => setOpen!(true)}

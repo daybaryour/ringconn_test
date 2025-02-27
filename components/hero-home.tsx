@@ -1,5 +1,4 @@
 "use client";
-
 import { useContext, useState } from "react";
 import "react-international-phone/style.css";
 import { PhoneInput } from "react-international-phone";
@@ -18,8 +17,7 @@ export default function HeroHome() {
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
-  const { open, setOpen } = useContext(ModalContex);
-  const [isVisible, setIsVisible] = useState(false);
+  const { open, setOpen, targetRef, isVisible } = useContext(ModalContex);
   const [closeSuccessModal, setCloseSuccessModal] = useState("hidden");
 
   const handleChange = (e: any) => {
@@ -99,6 +97,7 @@ export default function HeroHome() {
           className="bg-no-repeat w-[154px] h-[120px] p-[1px] mx-auto mt-[40px] bg-[164px__138px] bg-[-5px_-15px]"
         >
           <div
+            ref={targetRef}
             className="mx-auto bg-[#C3DEFF] hover:bg-[#b8d8ff] rounded-full size-[106px] flex justify-center items-center cursor-pointer shadow-[1px_1px_5px_1px_#f1f5f9]"
             onClick={() => setOpen!(true)}
           >
@@ -291,19 +290,24 @@ export default function HeroHome() {
           </div>
         </div>
       </Modal>
+      <div
+        className={`fixed ${isVisible} h-[93px] place-items-center bottom-0 w-full left-0 z-50 bg-gradient-to-t from-[#070707] from-60% to-transparent`}
+      >
+        <div
+          className={`flex justify-between  md:hidden w-full px-[5%]  items-center opacity-0 animate-fadeIn`}
+        >
+          <Link href={"https://www.cal.com/ringconnect/demo"} target="_blank">
+            <button className="bg-[#626F80] text-[#FFFFFF] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[152px] rounded-[4px]">
+              Book a demo
+            </button>
+          </Link>
 
-      <div className="fixed flex justify-between bottom-0 min-h-[40px] h-auto pb-[20px] md:hidden w-full left-0 bg-green z-50 px-[5%] bg-gradient-to-t from-[#070707] from-40% to-transparent">
-        <Link href={"#"} onClick={() => setOpen!(true)}>
-          <button className="bg-[#626F80] text-[#FFFFFF] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[141px] rounded-[4px]">
-            Give it a try
-          </button>
-        </Link>
-
-        <Link href={"https://www.cal.com/ringconnect/demo"} target="_blank">
-          <button className="bg-[#C3DEFF] text-[#333F48] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[141px] rounded-[4px]">
-            Book a demo
-          </button>
-        </Link>
+          <Link href={"#"} onClick={() => setOpen!(true)}>
+            <button className="bg-[#C3DEFF] text-[#333F48] font-switzer font-[500] text-[13px] leading-[17.16px] text-center h-[36px] w-[152px] rounded-[4px]">
+              Give it a try
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
