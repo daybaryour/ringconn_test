@@ -13,7 +13,7 @@ export default function HeroHome() {
     firstname: "",
     lastname: "",
     phone: "",
-    email: "",
+    email: "", //replaced scenario
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
