@@ -14,28 +14,6 @@ export default function DefaultLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { bottomTargetRef, targetRef, setIsVisible } = useContext(ModalContex);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (targetRef?.current && bottomTargetRef?.current) {
-        const rect = targetRef!.current.getBoundingClientRect();
-        const bottomRect = bottomTargetRef!.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (rect.top < windowHeight && rect.bottom >= 0) {
-          setIsVisible!("hidden");
-        } else {
-          setIsVisible!("flex opacity-100");
-        }
-        if (bottomRect.bottom < windowHeight) setIsVisible!("hidden");
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   useEffect(() => {
     AOS.init({
       once: true,

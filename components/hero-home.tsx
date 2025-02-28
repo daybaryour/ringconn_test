@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "react-international-phone/style.css";
 import { PhoneInput } from "react-international-phone";
 import Modal from "./ui/modal";
@@ -19,6 +19,28 @@ export default function HeroHome() {
   const [responseMessage, setResponseMessage] = useState("");
   const { open, setOpen, targetRef, isVisible } = useContext(ModalContex);
   const [closeSuccessModal, setCloseSuccessModal] = useState("hidden");
+
+  const { bottomTargetRef, setIsVisible } = useContext(ModalContex);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (targetRef?.current && bottomTargetRef?.current) {
+        const rect = targetRef!.current.getBoundingClientRect();
+        const bottomRect = bottomTargetRef!.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top < windowHeight && rect.bottom >= 0) {
+          setIsVisible!("hidden");
+        } else {
+          setIsVisible!("flex opacity-100");
+        }
+        if (bottomRect.bottom < windowHeight) setIsVisible!("hidden");
+      } else console.log("problem");
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleChange = (e: any) => {
     console.log(e.target);
