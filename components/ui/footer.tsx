@@ -5,7 +5,7 @@ import LinkedIn from "./linkedIn";
 import Logo from "./logo";
 import X from "./x";
 import { useContext } from "react";
-import { ModalContex } from "@/app/(default)/layout";
+import { ModalContex } from "@/app/(default)/context";
 
 export default function Footer() {
   const { setOpen, bottomTargetRef } = useContext(ModalContex);

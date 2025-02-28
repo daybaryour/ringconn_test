@@ -5,8 +5,8 @@ import { PhoneInput } from "react-international-phone";
 import Modal from "./ui/modal";
 import CallIcon from "./ui/callIIcon";
 import Carousel from "./ui/carousel";
-import { ModalContex } from "@/app/(default)/layout";
 import Link from "next/link";
+import { ModalContex } from "@/app/(default)/context";
 
 export default function HeroHome() {
   const [formData, setFormData] = useState({

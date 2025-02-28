@@ -1,6 +1,6 @@
 "use client";
 
-import { ModalContex } from "@/app/(default)/layout";
+import { ModalContex } from "@/app/(default)/context";
 import Link from "next/link";
 import { useContext } from "react";
 

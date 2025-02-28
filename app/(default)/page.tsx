@@ -1,4 +1,3 @@
-"use client";
 import Hero from "@/components/hero-home";
 import FeaturesPlanet from "@/components/features-planet";
 import Cta from "@/components/cta";
