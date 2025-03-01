@@ -302,7 +302,7 @@ export default function HeroHome() {
             </form>
           </div>
           <div
-            className={`flex flex-col justify-start items-center h-full w-full absolute bg-white top-0 left-0 ${closeSuccessModal}`}
+            className={`flex flex-col justify-start items-center h-full w-full absolute bg-white top-0 left-0 pt-[32px] ${closeSuccessModal}`}
           >
             {/* Green Circle with Animated Check Icon */}
             <div
