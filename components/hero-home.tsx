@@ -13,7 +13,8 @@ export default function HeroHome() {
     firstname: "",
     lastname: "",
     phone: "",
-    email: "", //replaced scenario
+    phone_ext: "",
+    email: "",
   });
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
@@ -34,7 +35,7 @@ export default function HeroHome() {
           setIsVisible!("flex opacity-100");
         }
         if (bottomRect.bottom < windowHeight) setIsVisible!("hidden");
-      } else console.log("problem");
+      } else console.log();
     };
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -43,13 +44,18 @@ export default function HeroHome() {
   }, []);
 
   const handleChange = (e: any) => {
-    console.log(e.target);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const resetModal = () => {
     setOpen!(false);
-    setFormData({ firstname: "", lastname: "", phone: "", email: "" });
+    setFormData({
+      firstname: "",
+      lastname: "",
+      phone: "",
+      email: "",
+      phone_ext: "",
+    });
     setResponseMessage("");
     setCloseSuccessModal("hidden");
   };
@@ -57,6 +63,7 @@ export default function HeroHome() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
+    console.log(formData);
     try {
       const response = await fetch("/api/calls", {
         method: "POST",
@@ -221,8 +228,12 @@ export default function HeroHome() {
                       width: "100%",
                     }}
                     value={formData.phone}
-                    onChange={(value) =>
-                      setFormData({ ...formData, phone: value || "" })
+                    onChange={(value, country) =>
+                      setFormData({
+                        ...formData,
+                        phone: value || "",
+                        phone_ext: country.inputValue.split(" ")[0],
+                      })
                     }
                     className="mt-2 border-2 px-3 border-gray-200 rounded-md w-full"
                     countrySelectorStyleProps={{
