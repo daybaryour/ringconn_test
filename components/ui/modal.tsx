@@ -15,11 +15,11 @@ export default function Modal({
     >
       {/* modal */}
       <div
-        className={`bg-white rounded-lg p-2 w-96 shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
+        className={`bg-[#2A2C30] font-switzer border-[.5px] border-[#758599] rounded-lg p-2 w-96 shadow transition-all ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute top-4 right-4 p-1 rounded-lg z-10 text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600"
+          className="absolute top-4 right-4 p-1 rounded-lg z-10 text-gray-400 bg-transparent hover:bg-[#262626] hover:text-gray-600"
           onClick={onClose}
         >
           <svg

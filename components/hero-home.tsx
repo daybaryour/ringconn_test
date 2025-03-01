@@ -157,29 +157,29 @@ export default function HeroHome() {
       </div>
 
       <Modal open={open!} onClose={() => resetModal()}>
-        <div className="text-center">
-          <div className="mx-auto my-4 ">
+        <div className="text-center font-switzer">
+          <div className="mx-auto my-4">
             <form
-              className="bg-transparent w-full flex flex-col rounded-md p-3 items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+              className="bg-transparent w-full flex flex-col gap-[16px] rounded-md p-3 items-center mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center mt-[20px]"
               onSubmit={handleSubmit}
             >
               {responseMessage && (
-                <p className="my-2 text-center text-red-600">
+                <p className="my-2 text-center text-red-600 font-switzer text-[12px] leading-[15.84px]">
                   {responseMessage}
                 </p>
               )}
-              <div className="flex w-full gap-4 mb-4">
+              <div className="flex w-full gap-4">
                 <div className="flex-1">
                   <label
                     htmlFor="first-name"
-                    className="block text-sm/6 text-left font-medium text-gray-900"
+                    className="block :autofill:bg-transparent text-[12px] leading-[15.84px] mb-[8px] text-left font-medium text-[#758599]"
                   >
                     First Name
                   </label>
-                  <div className="items-center border-2 py-1 rounded-lg">
+                  <div className="items-center border-[.5px] border-[#758599] h-[35px] rounded-[4px]">
                     <input
                       id="first-name"
-                      className="w-full outline-none border-none"
+                      className="w-full !outline-none h-[35px] !ring-0 text-[12px] !border-none active:border-none active:outline-none !bg-transparent text-[#758599]"
                       type="text"
                       name="firstname"
                       placeholder="First Name"
@@ -191,14 +191,14 @@ export default function HeroHome() {
                 <div className="flex-1">
                   <label
                     htmlFor="last-name"
-                    className="block text-sm/6 text-left font-medium text-gray-900"
+                    className="block text-[12px] leading-[15.84px] mb-[8px] text-left font-medium text-[#758599]"
                   >
                     Last Name
                   </label>
-                  <div className="items-center border-2 py-1 rounded-lg">
+                  <div className="items-center border-[.5px] border-[#758599] h-[35px] rounded-[4px]">
                     <input
                       id="last-name"
-                      className="w-full outline-none border-none"
+                      className="w-full !outline-none h-[35px] !ring-0 text-[12px] !border-none !bg-transparent text-[#758599]"
                       type="text"
                       name="lastname"
                       placeholder="Last Name"
@@ -211,21 +211,23 @@ export default function HeroHome() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="phone"
-                  className="block text-sm/6 text-left font-medium text-gray-900"
+                  className="block text-[12px] leading-[15.84px] mb-[8px] text-left font-medium text-[#758599]"
                 >
                   Phone Number
                 </label>
-                <div className="flex-1 w-full items-center py-1 mb-4 rounded-lg">
+                <div className="items-center border-[.5px] border-[#758599] h-[36px] rounded-[4px] z-50">
                   <PhoneInput
-                    defaultCountry="ng" // You can set a default country here
+                    defaultCountry="us" // You can set a default country here
                     name="phone"
                     // id="phone"
-                    inputClassName="w-full outline-none text-lg border-none"
+                    inputClassName="w-full font-switzer !outline-none !h-[35px] !ring-0 text-[12px] !border-none !bg-transparent text-[#758599]"
                     inputStyle={{
-                      padding: "1.2rem 1rem",
                       border: "none",
-                      fontSize: "1rem",
+                      fontSize: "12px",
+                      lineHeight: "15.84px",
                       width: "100%",
+                      color: "#758599",
+                      fontFamily: "switzer",
                     }}
                     value={formData.phone}
                     onChange={(value, country) =>
@@ -235,10 +237,18 @@ export default function HeroHome() {
                         phone_ext: country.inputValue.split(" ")[0],
                       })
                     }
-                    className="mt-2 border-2 px-3 border-gray-200 rounded-md w-full"
+                    className="!h-[35px] w-full font-switzer text-[12px] leading-[15.84px]"
                     countrySelectorStyleProps={{
-                      className: "outline-none border-none",
-                      style: { border: "none" },
+                      className:
+                        "outline-none border-none !bg-[#2A2C30] !h-[35px]",
+                      dropdownStyleProps: {
+                        className: "!bg-[#2A2C30] w-full",
+                        listItemClassName:
+                          "text-[#758599] hover:!bg-[#262626] aria-selected:!bg-[#262626] aria-selected:!text-gray-300",
+                      },
+                      buttonClassName:
+                        "!bg-transparent !border-0 !border-r-[0.5px] !border-b-[0.5px] !border-[#758599] !h-[35px] z-10",
+                      buttonContentWrapperClassName: "!h-[35px] mx-[8px]",
                     }}
                   />
                 </div>
@@ -246,14 +256,14 @@ export default function HeroHome() {
               <div className="flex-1 w-full">
                 <label
                   htmlFor="email"
-                  className="block text-sm/6 text-left font-medium text-gray-900"
+                  className="block text-[12px] leading-[15.84px] mb-[8px] text-left font-medium text-[#758599]"
                 >
                   Email address
                 </label>
-                <div className="flex-1 w-full items-center py-1 mb-4 border-2 rounded-lg">
+                <div className="items-center border-[.5px] border-[#758599] h-[35px] rounded-[4px]">
                   <input
                     id="email"
-                    className="w-full outline-none border-none"
+                    className="w-full !outline-none h-[35px] !ring-0 text-[12px] !border-none !bg-transparent text-[#758599]"
                     type="text"
                     name="email"
                     placeholder="Email address"
@@ -294,7 +304,7 @@ export default function HeroHome() {
               </div> */}
               <button
                 type="submit"
-                className="btn rounded-sm group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                className="btn rounded-[4px] group w-full bg-gradient-to-t from-[#C3DEFF] to-[#C3DEFF] bg-[length:100%_100%] bg-[bottom] text-[#2A2C30] font-switzer font-[500] text-[12px] leading-[15.84px] shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                 disabled={loading}
               >
                 {loading ? "Submitting..." : "Get Started"}
@@ -302,7 +312,7 @@ export default function HeroHome() {
             </form>
           </div>
           <div
-            className={`flex flex-col justify-center items-center h-full w-full absolute bg-white top-0 left-0 ${closeSuccessModal}`}
+            className={`flex flex-col justify-center items-center h-full w-full absolute bg-[#2A2C30] top-0 left-0 ${closeSuccessModal}`}
           >
             {/* Green Circle with Animated Check Icon */}
             <div
@@ -324,8 +334,8 @@ export default function HeroHome() {
 
             {/* Text */}
             <div className={`relative flex`}>
-              <p className="mt-4 text-lg font-semibold text-gray-700">
-                Expect a call from us shortly
+              <p className="mt-4 text-lg font-semibold text-[#758599] font-switzer">
+                We are calling...
               </p>
             </div>
           </div>
