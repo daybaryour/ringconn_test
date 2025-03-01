@@ -3,7 +3,8 @@ import {  NextRequest, NextResponse } from 'next/server';
 interface FormData {
   firstname: string;
   lastname: string;
-  sales_scenario: string;
+  email: string;
+  phone_ext: string;
   phone: string;
 }
 
@@ -13,9 +14,9 @@ export async function POST(
 ) {
   try {
     const body = await req.json() as FormData;
-    const { firstname, lastname, sales_scenario, phone } = body;
+    const { firstname, lastname, email, phone_ext,  phone } = body;
 
-    if (!firstname || !phone || !sales_scenario || !lastname) {
+    if (!firstname || !phone || !email || !phone_ext || !lastname) {
       return NextResponse.json(
         { message: 'All fields are required.', status: 400  },
         { status: 400 }
@@ -33,7 +34,8 @@ export async function POST(
         firstname,
         lastname,
         phone,
-        sales_scenario,
+        email,
+        phone_ext
       }),
     });
     const data = await response.json();
