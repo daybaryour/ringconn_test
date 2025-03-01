@@ -80,7 +80,15 @@ export default function HeroHome() {
   };
 
   return (
-    <section className="mt-[175px]">
+    <section
+      className="mt-[175px] bg-no-repeat lg:bg-[0px_90px] md:bg-[50%_130px] bg-[50%_132px] lg:bg-[100%__784.1819458007812px] md:bg-[150%__784.1819458007812px] bg-[200%__784.1819458007812px]"
+      style={{
+        backgroundImage: "url(images/PerspectiveGrid.png)",
+        //backgroundPositionY: "269px",
+        //backgroundPositionX: "-2816.96px",
+        //backgroundSize: "100% 784.1819458007812px",
+      }}
+    >
       {/* Hero content */}
       <div className="bg-transparent">
         {/* Section header */}

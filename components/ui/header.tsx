@@ -3,7 +3,7 @@ import Logo from "./logo";
 
 export default function Header() {
   return (
-    <header className="absolute z-30 w-full px-[33px] md:px-[78.28px] lg:px-[150px] bg-[#070707]">
+    <header className="absolute z-30 w-full max-w-[1442px] px-[33px] md:px-[78.28px] lg:px-[150px] bg-[#070707]">
       <div className="mt-[22px] md:mt-[32px] flex h-[35px] items-center justify-between">
         {/* Site branding */}
         <div className="flex items-center justify-center">

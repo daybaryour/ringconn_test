@@ -12,16 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`antialiased bg-[#070707] bg-no-repeat md:bg-[0px_269px] bg-[50%_305px] md:bg-[100%__784.1819458007812px] bg-[200%__784.1819458007812px]`}
-        style={{
-          backgroundImage: "url(images/PerspectiveGrid.png)",
-          //backgroundPositionY: "269px",
-          //backgroundPositionX: "-2816.96px",
-          //backgroundSize: "100% 784.1819458007812px",
-        }}
-      >
+    <html lang="en" className="scroll-smooth w-full">
+      <body className={`antialiased bg-[#070707] max-w-[1442px] mx-auto`}>
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>
