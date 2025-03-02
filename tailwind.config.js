@@ -12,6 +12,7 @@ module.exports = {
         mono: ["Roboto Mono", "monospace"],
         switzer: ["Switzer", "san-serif"],
         geist: ["Geist", "san-serif"],
+        ibm: ["IBM", "serif"],
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],

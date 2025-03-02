@@ -8,12 +8,12 @@ const inter = Inter({
 
 export default function FeaturesPlanet() {
   return (
-    <section className="relative px-[25px] sd:px-[50px] md:px-[112px] pt-[24px] pb-[96] sd:!py-[96px] bg-[#070707]">
+    <section className="relative px-[25px] sd:px-[50px] md:px-[112px] pt-[24px] !pb-[96] sd:!py-[96px] bg-[#070707]">
       <div className="w-full flex flex-col gap-[48px] md:gap-[56px]">
         {/* Section header */}
         <div className="sd:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
           <h1 className="bg-gradient-radial from-[#FFFFFF] from-10% via-[#758599] to-[#758599] bg-clip-text w-full text-center">
-            <span className="font-[500] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[52.8px] font-switzer text-transparent tracking-[-2.5%] capitalize">
+            <span className="font-[400] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[60px] font-ibm text-transparent tracking-[-1px] capitalize">
               Built to meet your <br className="hidden" /> business needs
             </span>
           </h1>

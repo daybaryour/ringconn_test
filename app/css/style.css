@@ -18,6 +18,11 @@
   src: url("../../public/fonts/geist/Geist-Variable.ttf");
 }
 
+@font-face {
+  font-family: "IBM";
+  src: url("../../public/fonts/ibm/IBMPlexSerif-Regular.ttf");
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

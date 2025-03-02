@@ -1,7 +1,7 @@
 export default function HowTo() {
   return (
     <div
-      className="p-[29px] pb-[96px]  md:!p-[75px] min-h-[575px] h-auto bg-[#070707] bg-contain bg-center bg-no-repeat"
+      className="px-[29px] !pb-[56px] mt-[24px] sd:mt-0 md:!p-[75px] min-h-[575px] h-auto bg-[#070707] bg-contain bg-center bg-no-repeat"
       style={{
         backgroundImage: "url(images/Ellipse.png)",
         backgroundSize: "1058px 858px",
@@ -10,12 +10,12 @@ export default function HowTo() {
     >
       <div className="md:mx-auto w-full lg:w-[880px] text-center flex flex-col items-center gap-[8px]">
         <h1 className="bg-gradient-radial from-[#FFFFFF] from-10% via-[#758599] to-[#758599] bg-clip-text w-full text-center">
-          <span className="font-[500] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[52.8px] font-switzer text-transparent tracking-[-2.5%] capitalize">
+          <span className="font-[400] text-[30px] md:text-[40px] text-center leading-[40px] md:leading-[52.8px] font-ibm text-transparent tracking-[-1px] capitalize">
             Setup AI voice call in minutes
           </span>
         </h1>
         <p
-          className="font-switzer font-[400] text-[12px] sd:text-[14px] md:text-[16px] leading-[15.84px] md:leading-[28px] sd:leading-[24px] text-[#758599] w-full lg:w-[520px] md:px-[10%] px-[12%] lg:px-0"
+          className="font-switzer font-[400] text-[12px] sd:text-[14px] md:text-[16px] leading-[15.84px] md:leading-[28px] sd:leading-[24px] text-[#758599] w-full lg:w-[520px] md:px-[10%] px-[10%] lg:px-0"
           data-aos="zoom-y-out"
           data-aos-delay={300}
         >

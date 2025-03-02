@@ -99,7 +99,7 @@ export default function HeroHome() {
       {/* Hero content */}
       <div className="bg-transparent">
         {/* Section header */}
-        <div className="text-center flex flex-col gap-[11px] h-auto lg:h-[325px] w-full md:w-[510px] mx-auto">
+        <div className="text-center flex flex-col gap-[11px] h-auto w-full md:w-[724px] mx-auto">
           <div className="mx-auto">
             <Carousel />
           </div>
@@ -107,10 +107,11 @@ export default function HeroHome() {
             <h1
               data-aos="zoom-y-out"
               data-aos-delay={150}
-              className="bg-gradient-radial from-[#FFFFFF] from-20% via-[#758599] to-[#758599] bg-clip-text"
+              className="bg-gradient-radial from-[#FFFFFF] from-20% via-[#758599] to-[#758599] bg-clip-text w-full"
             >
-              <span className="font-[500] text-[36px] md:text-[60px] leading-[50px] md:leading-[72px] font-switzer text-transparent tracking-[-2.5%] w-full">
-                AI Voice Calls that <br /> Drives Revenue
+              <span className="font-[400] text-[36px] md:text-[64px] leading-[50px] md:leading-[72px] font-ibm text-transparent tracking-[-2px]">
+                AI Voice Calls that Drives <br />
+                More Revenue
               </span>
             </h1>
           </div>
