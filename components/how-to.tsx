@@ -1,7 +1,7 @@
 export default function HowTo() {
   return (
     <div
-      className="relative px-[29px] !pb-[56px] !mt-[30px] sd:mt-0 md:!p-[75px] min-h-[575px] h-auto bg-[#070707] bg-contain bg-center bg-no-repeat"
+      className="relative px-[29px] !pb-[56px] !mt-[60px] sd:mt-0 md:!p-[75px] min-h-[575px] h-auto bg-[#070707] bg-contain bg-center bg-no-repeat"
       style={{
         backgroundImage: "url(images/Ellipse.png)",
         backgroundSize: "1058px 858px",
