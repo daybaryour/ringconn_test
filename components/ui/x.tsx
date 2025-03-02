@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function X({ className }: { className?: any }) {
   return (
     <Link
-      href="https://www.x.com/ringconnect"
+      href="https://x.com/ringconnectai"
       className="inline-flex align-center"
       aria-label="Cruip"
       target="_blank"
