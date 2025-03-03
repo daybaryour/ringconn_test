@@ -1,4 +1,5 @@
 import "./css/style.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: "RingConnect: Enterprise-grade Voice AI for Businesses",
@@ -18,6 +19,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>
+        <GoogleAnalytics gaId="G-TYF9VJCM81" />
       </body>
     </html>
   );
