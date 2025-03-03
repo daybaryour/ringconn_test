@@ -335,8 +335,8 @@ export default function HeroHome() {
 
             {/* Text */}
             <div className={`relative flex`}>
-              <p className="mt-4 text-lg font-semibold text-[#758599] font-switzer">
-                We are calling...
+              <p className="mt-4 text-lg font-[500] text-[#758599] font-switzer">
+                We'll call you soon
               </p>
             </div>
           </div>
