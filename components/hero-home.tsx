@@ -7,6 +7,7 @@ import CallIcon from "./ui/callIIcon";
 import Carousel from "./ui/carousel";
 import Link from "next/link";
 import { ModalContex } from "@/app/(default)/context";
+import { disableIOSTextFieldZoom } from "@/app/lib/utils";
 
 export default function HeroHome() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,7 @@ export default function HeroHome() {
   const { bottomTargetRef, setIsVisible } = useContext(ModalContex);
 
   useEffect(() => {
+    disableIOSTextFieldZoom();
     const handleScroll = () => {
       if (targetRef?.current && bottomTargetRef?.current) {
         const rect = targetRef!.current.getBoundingClientRect();
