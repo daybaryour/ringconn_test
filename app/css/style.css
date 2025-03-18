@@ -35,3 +35,11 @@
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-in-out forwards;
 }
+
+.country.highlight {
+  @apply !bg-[#262626] aria-selected:!text-gray-300;
+}
+
+.country {
+  @apply hover:!bg-[#262626];
+}

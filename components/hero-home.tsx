@@ -1,13 +1,14 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
 import "react-international-phone/style.css";
-import { PhoneInput } from "react-international-phone";
 import Modal from "./ui/modal";
 import CallIcon from "./ui/callIIcon";
 import Carousel from "./ui/carousel";
 import Link from "next/link";
 import { ModalContex } from "@/app/(default)/context";
 import { disableIOSTextFieldZoom } from "@/app/lib/utils";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 export default function HeroHome() {
   const [formData, setFormData] = useState({
@@ -218,8 +219,32 @@ export default function HeroHome() {
                 >
                   Phone Number
                 </label>
-                <div className="items-center border-[.5px] border-[#758599] h-[36px] rounded-[4px] z-50">
-                  <PhoneInput
+
+                <PhoneInput
+                  country={"us"} // Default country
+                  value={formData.phone}
+                  onChange={(value, country: any) => {
+                    setFormData({
+                      ...formData,
+                      phone: "+" + value || "",
+                      phone_ext: "+" + country?.dialCode,
+                    });
+                  }}
+                  inputProps={{
+                    required: true,
+                  }}
+                  countryCodeEditable
+                  enableSearch
+                  inputClass="!outline-none !h-[33px] !ring-0 text-[12px] !border-none !bg-[transparent] !text-[#758599] !font-switzer !text-[12px] !m-0 !ml-[13%] !w-[87%] !pl-[5px]"
+                  containerClass="!bg-transparent !h-[35px] rounded-[4px] !w-full !border-[#758599] !border-[0.5px]"
+                  buttonClass="!h-[33px] w-[13%] !bg-transparent [&>div]:!bg-transparent !border-0 !border-r-[0.5px] !border-[#758599] !outline-none"
+                  searchPlaceholder="Search countries"
+                  searchNotFound="No country found"
+                  disableSearchIcon
+                  dropdownClass="!bg-[#2A2C30] !text-left !font-switzer !text-[12px] !text-[#758599]"
+                  searchClass="!font-switzer !text-[12px] !ring-0 !bg-[#2A2C30] [&>input]:!bg-transparent [&>input]:!border-[#758599] [&>input]:!border-[0.5px]"
+                />
+                {/*  <PhoneInput
                     defaultCountry="us" // You can set a default country here
                     name="phone"
                     // id="phone"
@@ -253,8 +278,7 @@ export default function HeroHome() {
                         "!bg-transparent !border-0 !border-r-[0.5px] !border-b-[0.5px] !border-[#758599] !h-[35px] z-10",
                       buttonContentWrapperClassName: "!h-[35px] mx-[8px]",
                     }}
-                  />
-                </div>
+                  /> */}
               </div>
               <div className="flex-1 w-full">
                 <label
